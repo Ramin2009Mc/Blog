@@ -1,0 +1,25 @@
+{% extends 'article/base.html' %}
+{% load static %}
+{% block title %}me{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/articles_list.css' %}">
+<div id="too-narrow-message" style="display:none;max-width:340px;width:90vw;aspect-ratio:1/1;box-shadow:0 2px 8px rgba(0,0,0,0.10);border-radius:0;background:rgba(255,255,255,0.97);margin:60px auto;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;">
+    <div style="flex:1;display:flex;align-items:center;justify-content:center;width:100%;flex-direction:column;">
+        <img src="{% static 'img/ramin_error.png' %}" alt="ramin" style="max-width:60%;height:auto;display:block;box-shadow:none;background:transparent;object-fit:contain;margin:32px auto 0 auto;">
+        <div style="text-align:center;padding:16px 1em 0 1em;font-size:1.15rem;color:#444;">Открой на компьютере пж</div>
+    </div>
+</div>
+<div id="article-content">
+    <div class="articles-list-scroll-box">
+        <h2>🗯️</h2>
+        <ul class="articles-list">
+            {% for article in articles %}
+                <li>
+                    <a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<img src="{% static 'img/ramin_eyes.jpeg' %}" alt="Ramin Eyes" class="ramin-eyes-floating" />
+{% endblock %}

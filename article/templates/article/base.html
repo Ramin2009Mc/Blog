@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    
+    <title>{% block title %}ramin{% endblock %}</title>
+    <script>
+    function checkWidth() {
+        var content = document.getElementById('article-content');
+        var msg = document.getElementById('too-narrow-message');
+        if(content && msg) {
+            if(window.innerWidth < 600) {
+                content.style.display = 'none';
+                msg.style.display = 'block';
+            } else {
+                content.style.display = '';
+                msg.style.display = 'none';
+            }
+        }
+    }
+    window.addEventListener('resize', checkWidth);
+    window.addEventListener('DOMContentLoaded', checkWidth);
+    </script>
+  </head>
+  <body>
+    {% comment %} <div class="sidebar">
+      <div class="menu">
+        <a href="{% url 'articles_list' %}">Articles</a>
+
+      </div>
+    </div> {% endcomment %}
+    <div id="main-content" class="main">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="mobile-blocked">
+        <div style="flex:1;display:flex;align-items:center;justify-content:center;width:100%;flex-direction:column;">
+            <img src="{% static 'img/ramin_error.png' %}" alt="ramin" style="max-width:60%;height:auto;display:block;box-shadow:none;background:transparent;object-fit:contain;margin:32px auto 0 auto;">
+            <div style="text-align:center;padding:16px 1em 0 1em;font-size:1.15rem;color:#444;">Открой на компьютере пж</div>
+        </div>
+    </div>
+    {% comment %} <img src="{% static 'img/ramin_eyes.jpeg' %}" alt="ramin_eyes" class="ramin-eyes-floating" id="theme-toggle" title="Переключить тему"> {% endcomment %}
+  </body>
+</html>

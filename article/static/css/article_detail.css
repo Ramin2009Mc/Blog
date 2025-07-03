@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: url('/static/img/your-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    min-height: 100vh;
+    font-size: 1.1rem;
+    overflow-x: hidden;
+}
+
+main, .content-wrapper {
+    max-width: 900px;
+    width: 54vw;
+    min-width: 340px;
+    margin: 60px 0 60px 5vw;
+    background: rgba(255,255,255,0.85);
+    border-radius: 0px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 2.5rem 2rem;
+    transition: width 0.3s, font-size 0.3s;
+}
+
+h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: 'Helvetica', Arial, sans-serif;
+    border-bottom: 2px solid #cdcdcd;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: font-size 0.3s;
+}
+
+p {
+    font-size: 1.1rem;
+    transition: font-size 0.3s;
+}
+
+.back-btn {
+    display: inline-block;
+    align-self: flex-start;
+    margin: 0 0 1.2rem 0;
+    padding: 0.3em 0.9em;
+    font-size: 1.5rem;
+    color: #888;
+    background: rgba(240,240,240,0.7);
+    border: 1.5px solid #c6c4c4;
+    border-radius: 0px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(180,180,180,0.13);
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.04em;
+    filter: grayscale(0.3) contrast(1.1);
+    position: sticky;
+    top: 1.2rem;
+    z-index: 2;
+}
+
+.back-btn:hover, .back-btn:focus {
+    background: #e0e0e0;
+    color: #222;
+    filter: grayscale(0.1) contrast(1.2);
+}
+
+.ramin-eyes-floating {
+    position: fixed;
+    right: 2vw;
+    bottom: 0;
+    width: min(180px, 68vw, 68vh);
+    height: auto;
+    max-width: 60vw;
+    max-height: 28vh;
+    z-index: 1000;
+    box-shadow: none;
+    object-fit: cover;
+    background: none;
+    border-radius: 10px;
+    transition: width 0.3s, height 0.3s, right 0.3s, bottom 0.3s;
+}
+
+@media (max-width: 1200px) {
+    main, .content-wrapper {
+        width: 80vw;
+        max-width: 98vw;
+        margin: 40px 0 40px 2vw;
+        padding: 1.5rem 1rem;
+    }
+    h3 {
+        font-size: 1.7rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        justify-content: center;
+    }
+    main, .content-wrapper {
+        width: 100vw;
+        min-width: unset;
+        margin: 20px auto;
+        padding: 1rem 0.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.95rem;
+    }
+    body {
+        font-size: 0.95rem;
+    }
+    .ramin-eyes-floating {
+        width: min(90px, 40vw, 22vh);
+        max-width: 40vw;
+        max-height: 22vh;
+        right: 1vw;
+        bottom: 0;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .ramin-eyes-floating {
+        display: none;
+    }
+}

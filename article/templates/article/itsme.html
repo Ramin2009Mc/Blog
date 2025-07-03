@@ -1,0 +1,16 @@
+{% extends 'article/base.html' %}
+{% load static %}
+
+{% block title %}Its me{% endblock %}
+{% block content %}
+    <link rel = "stylesheet" href="{% static 'css/itsme.css' %}">
+    <div class="scroll-box">
+        <p>Что бы ты сделал, если этого никто не увидел?</p>
+        <!-- Здесь можно добавить больше контента для проверки скролла -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.</p>
+    </div>
+{% endblock %}
