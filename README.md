@@ -7,10 +7,6 @@ A minimalist personal website for publishing my articles and thoughts. Built wit
 - Responsive layout for all devices
 - Articles and thoughts published in a simple format
 
-## Tech Stack
-- [Django](https://www.djangoproject.com/)
-- [Python](https://www.python.org/)
-
 ---
 
 ## Technical Details
