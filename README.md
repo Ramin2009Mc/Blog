@@ -1,4 +1,4 @@
-# ramin.me
+# ramin.me(blog)
 
 A minimalist personal website for publishing my articles and thoughts. Built with Django and Python, this site is a space for sharing ideas, reflections, and personal projects.
 
@@ -27,7 +27,7 @@ A minimalist personal website for publishing my articles and thoughts. Built wit
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:Ramin2009Mc/Blog.git
+   git clone https://github.com/Ramin2009Mc/Blog.git
    cd ramin.me
    ```
 2. Create and activate a virtual environment:
